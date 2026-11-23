@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel Kolník | PPC & Analytics</title>
+<meta name="description" content="Freelance PPC and analytics consultant: Google Ads, GA4, Tag Manager and reporting.">
+</head>
+<body>
+<style>
+  :root{--ink:#0f1222;--ink2:#171b31;--line:#2a2f4d;--text:#e9ebf5;--muted:#a3a8c3;--acc:#c6f432;--acc2:#7c8cff}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--ink);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.1;letter-spacing:-.02em}
+  a{color:inherit}
+  /* nav */
+  nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
+  .logo{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:700;font-size:18px}
+  .logo span{color:var(--acc)}
+  .navlink{font-size:14px;color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:8px 16px;border-radius:99px;transition:.2s}
+  .navlink:hover{border-color:var(--acc);color:var(--text)}
+  /* hero */
+  .hero{position:relative;padding:72px 0 96px;overflow:hidden}
+  .hero:before{content:"";position:absolute;right:-160px;top:-120px;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle,rgba(124,140,255,.35),transparent 65%);pointer-events:none}
+  .tag{display:inline-flex;gap:8px;align-items:center;font-size:13px;color:var(--muted);border:1px solid var(--line);padding:6px 14px;border-radius:99px;margin-bottom:28px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 12px var(--acc)}
+  .hero h1{font-size:clamp(38px,6.4vw,76px);font-weight:700;max-width:820px}
+  .hero h1 em{font-style:normal;color:var(--acc)}
+  .hero p{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:600px;margin:26px 0 38px}
+  .btn{display:inline-block;background:var(--acc);color:var(--ink);font-weight:600;text-decoration:none;padding:15px 28px;border-radius:12px;transition:.2s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(198,244,50,.25)}
+  .stats{display:flex;flex-wrap:wrap;gap:40px;margin-top:64px;padding-top:32px;border-top:1px solid var(--line)}
+  .stats b{display:block;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:22px;color:var(--text)}
+  .stats span{font-size:14px;color:var(--muted)}
+  /* sections */
+  section{padding:88px 0;border-top:1px solid var(--line)}
+  .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:14px;font-weight:600}
+  h2{font-size:clamp(28px,4vw,44px);margin-bottom:44px;max-width:640px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .card{background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:28px;transition:.25s}
+  .card:hover{border-color:var(--acc2);transform:translateY(-4px)}
+  .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(198,244,50,.1);color:var(--acc);margin-bottom:20px}
+  .card h3{font-size:19px;margin-bottom:10px}
+  .card p{font-size:15px;color:var(--muted)}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;counter-reset:s}
+  .step{counter-increment:s}
+  .step:before{content:"0" counter(s);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:14px;color:var(--acc2);display:block;margin-bottom:12px;font-weight:700}
+  .step h3{font-size:19px;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:15px}
+  .note{margin-top:48px;background:var(--ink2);border-left:3px solid var(--acc);border-radius:0 14px 14px 0;padding:22px 26px;color:var(--muted);font-size:15px}
+  /* contact */
+  .contact{text-align:center;background:linear-gradient(160deg,var(--ink2),#1d2246);border:1px solid var(--line);border-radius:28px;padding:72px 24px}
+  .contact h2{margin:0 auto 18px}
+  .contact p{color:var(--muted);margin-bottom:32px}
+  .mail{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:clamp(18px,3vw,26px);color:var(--acc);text-decoration:none;border-bottom:2px solid transparent;transition:.2s}
+  .mail:hover{border-color:var(--acc)}
+  .privacy{font-size:14px;color:var(--muted);max-width:760px}
+  .privacy h3{font-size:18px;color:var(--text);margin-bottom:12px}
+  .privacy p{margin-bottom:10px}
+  footer{padding:32px 0 48px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  @media (max-width:600px){.hero{padding:40px 0 64px}section{padding:64px 0}.stats{gap:24px}}
+  body{overflow-x:hidden}.wrap{padding:0 16px}
+</style>
+
+<div class="wrap">
+  <nav>
+    <div class="logo">Daniel Kolník<span>.</span></div>
+    <a class="navlink" href="mailto:danielkolnik.ppc@gmail.com">Get in touch</a>
+  </nav>
+
+  <header class="hero">
+    <div class="tag"><span class="dot"></span>Freelance PPC &amp; Analytics consultant</div>
+    <h1>Ads that pay off. <em>Data you can trust.</em></h1>
+    <p>I help small and medium-sized businesses get more out of Google Ads and measure what really drives their results – from clean tracking to clear monthly reports.</p>
+    <a class="btn" href="mailto:danielkolnik.ppc@gmail.com">Let's talk about your account →</a>
+    <div class="stats">
+      <div><b>Google Ads</b><span>Search · Shopping · PMax</span></div>
+      <div><b>GA4 + GTM</b><span>Tracking &amp; Consent Mode</span></div>
+      <div><b>Reporting</b><span>Clear, regular, actionable</span></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="eyebrow">Services</div>
+    <h2>Everything between the ad click and the sale.</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+        <h3>Google Ads management</h3>
+        <p>Campaign setup, ongoing optimization and scaling of Search, Shopping and Performance Max campaigns.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg></div>
+        <h3>GA4 &amp; Tag Manager</h3>
+        <p>Measurement plans, e-commerce tracking, conversions and Consent Mode v2 – implemented and tested.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></div>
+        <h3>Reporting &amp; audits</h3>
+        <p>Monthly performance reports and in-depth account audits with concrete, prioritized next steps.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2l1.5 4h9L18 2"/><path d="M3 6h18l-2 14H5z"/><path d="M9 11a3 3 0 0 0 6 0"/></svg></div>
+        <h3>Merchant Center &amp; feeds</h3>
+        <p>Product feed quality, disapprovals and Merchant Center setup for e-shops selling through Shopping.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">How I work</div>
+    <h2>Simple process, transparent results.</h2>
+    <div class="steps">
+      <div class="step"><h3>Audit</h3><p>I review your account, tracking and goals to find what's holding results back.</p></div>
+      <div class="step"><h3>Fix &amp; build</h3><p>Reliable measurement first, then campaign structure, bidding and creatives.</p></div>
+      <div class="step"><h3>Optimize &amp; report</h3><p>Continuous optimization with regular reports you can actually read.</p></div>
+    </div>
+    <div class="note">All client Google Ads accounts are managed under my Google Ads manager account. For reporting I use internal tools built on official Google APIs and an AI assistant. Client data is used only to serve that client and is never sold. Details are in the <a href="/privacy/">privacy policy</a>.</div>
+  </section>
+
+  <section>
+    <div class="contact">
+      <div class="eyebrow">Contact</div>
+      <h2>Want more from your ad budget?</h2>
+      <p>Write me a few lines about your business – I'll get back to you within two working days.</p>
+      <a class="mail" href="mailto:danielkolnik.ppc@gmail.com">danielkolnik.ppc@gmail.com</a>
+    </div>
+  </section>
+
+  <section class="privacy" id="privacy">
+    <h3>Privacy</h3>
+    <p>Read how client and account data is handled in the <a href="/privacy/">privacy policy</a>.</p>
+  </section>
+
+  <footer>
+    <span>© 2026 Daniel Kolník · Freelance PPC &amp; Analytics</span>
+    <span>Slovakia · danielkolnik.ppc@gmail.com</span>
+  </footer>
+</div>
+</body>
+</html>
